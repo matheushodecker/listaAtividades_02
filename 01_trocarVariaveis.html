@@ -4,12 +4,17 @@
     Faça um script que pede dois inteiros e armazene eles em duas variáveis.
     Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
     */
-
+    
     //ENTRADA
+    let n1 = Number(prompt(`informe um numero inteiro`));
+    let n2 = Number(prompt(`informe um numero inteiro`));
 
     //PROCESSAMENTO
+    const troca = n1;
+    n1 = n2;
+    n2 = troca;
 
     //SAÍDA
-
+    alert(`O novo valor de n1 é ${n1} e o novo valor de n2 é ${n2}.`);
     
 </script>
