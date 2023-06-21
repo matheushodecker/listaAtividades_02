@@ -14,10 +14,26 @@
     */
 
     //ENTRADA
+    const combustivel = prompt("Bem vindo Ao posto IFC, você deseja abastecer com gasolina ou álcool? Responda com 'G' ou 'A'").toLocaleUpperCase().trim();
+    let preco = 0;
 
 
     //PROCESSAMENTO
+    if (combustivel == "G" || combustivel == "A") {
+    
+    const litros = Number(prompt("Quantos litros deseja abastecer?").replace(",","."));
 
+    if (combustivel == "G") {
+       litros <= 20 ? preco = litros*6.24 : preco = litros*6.11;
+       document.write(`O valor a ser pago é de ${preco.toFixed(1).replace(".",",")} R$`);
+    } else if (combustivel == "A") {
+        litros <= 20 ? preco = litros*5.917 : preco = litros*5.795;
+       document.write(`O valor a ser pago é de ${preco.toFixed(1).replace(".",",")} R$`);
+    } 
+
+    } else {
+        alert("NÃO VIU QUE É APENAS ALCOOL OU GASOLINA?");
+    }
     
     //SAÍDA
 

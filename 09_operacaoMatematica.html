@@ -8,11 +8,53 @@
     */
 
     //ENTRADA
-
+    const numero01 = Number(prompt("Informe um número").trim());
+    const numero02 = Number(prompt("Informe outro número").trim());
+    const operacao = prompt("Qual operação você deseja realizar (adição: +), (subtração: -), (divisão: /), (multiplicação: *)");
 
     //PROCESSAMENTO
+    let operesultado = 0;
 
-    
+    if (operacao === "+" || operacao === "-" || operacao === "*" || operacao === "/") {
+
+        if (operacao == "-") {
+            operesultado = numero01 - numero02
+        }
+        else if (operacao == "+") {
+            operesultado = numero01 + numero02
+        }
+        else if (operacao == "/") {
+            operesultado = numero01 * numero02
+        }
+        else if (operacao == "/") {
+            operesultado = numero01 / numero02
+        }
+        if (operesultado > 0 && operesultado % 2 === 0 && Number.isInteger(operesultado)) {
+            alert(`O número ${operesultado} é par, positivo e inteiro.`);
+        }
+        else if (operesultado < 0 && operesultado % 2 === 0 && Number.isInteger(operesultado)) {
+            alert(`O número ${operesultado} é par, negativo e inteiro`);
+        }
+        else if (operesultado > 0 && operesultado % 2 === 0 && !Number.isInteger(operesultado)) {
+            alert(`O número ${operesultado.trim().replase(",", ".")} é par, positivo e decimal`);
+        }
+        else if (operesultado < 0 && operesultado % 2 === 0 && !Number.isInteger(operesultado)) {
+            alert(`O número ${operesultado.trim().replase(",", ".")} é par, negativo e decimal`)
+        }
+        else if (operesultado > 0 && !operesultado % 2 === 0 && !Number.isInteger(operesultado)) {
+            alert(`O número ${operesultado.toFixed(1), replase(",", ".")} é ímpar, positivo e decimal`);
+        }
+        else if (operesultado < 0 && !operesultado % 2 === 0 && Number.isInteger(operesultado)) {
+            alert(`O número ${operesultado} é ímpar, negativo e inteiro`);
+        }
+        else if (operesultado > 0 && !operesultado % 2 === 0 && Number.isInteger(operesultado)) {
+            alert(`O número ${operesultado} é ímpar, positivo e inteiro`);
+        }
+    }
+    else {
+        alert(`Opção inválida, use apenas as alternativas acéfalo.`);
+    }
+
     //SAÍDA
 
 

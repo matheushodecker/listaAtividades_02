@@ -3,9 +3,15 @@
     // Recebe um ano e informa se ele é bissexto ou não.
 
     // Entrada
-    
+    const ano = Number(prompt(`Insira um ano`).trim());
+    const anoBissexto = ano / 4;
     // Processamento
-
+    if (Number.isInteger(anoBissexto)) {
+        alert(`Esse ano é bissexto`);
+    }
+    else {
+        alert(`Esse ano não é bissexto`);
+    }
     // Saída
 
 </script>

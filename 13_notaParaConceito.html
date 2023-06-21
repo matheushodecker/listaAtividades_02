@@ -9,11 +9,29 @@
     // Entre 5.9 e zero            E
 
     // Entrada
-
+    const nota = Number(prompt("Informe sua nota de zero a dez").replace(",",".").trim());
+    const conceito = 0;
     
     // Processamento
 
-    
+    if (conceito >=9 && conceito <=10) {
+        alert(`O conceito para sua nota ${nota}, é de A.`);
+    }
+    else if (conceito >= 8 && conceito <= 8.9) {
+        alert(`O conceito para sua nota ${nota}, é de B`);
+    }
+    else if (conceito >= 7.9 && conceito <= 7) {
+        alert(`O conceito para sua nota ${nota}, é de C`);
+    }
+    else if (conceito >=6.9 && conceito <= 6) {
+        alert(`O conceito para nota ${nota},é de D`);
+    }
+    else if (conceito <= 5.9) {
+        alert(`O conceito para a sua nota ${nota}, é de E.`);
+    }
+    else {
+        alert(`Opção inválida, a nota só vai de 0 a 10 jumento.`);
+    }   
     // Saída
 
 </script>

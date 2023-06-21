@@ -8,9 +8,25 @@
     
     // Entrada
 
-    
+    const preco = Number(prompt("Informe o preço do produto em reais").trim().replace(".",","));
+    let aumento = 0;
     // Processamento
-
+    if (preco >0 && preco <=280) {
+        aumento = preco + (preco * 20) / 100;
+        alert(`O valor final é de ${aumento}`);
+    }
+    else if (preco >280 && preco <= 700) {
+        aumento = preco + (preco * 15) / 100;
+        alert(`O valor final é de ${aumento}`);
+    }
+    else if (preco > 700 && preco <= 1500) {
+        aumento = preco + (preco * 10) / 100;
+        alert(`O valor final é de ${aumento}`);
+    }
+    else if (preco > 1500) {
+        aumento = preco + (preco * 5) / 100;
+        alert(`O valor final é de ${aumento}`);
+    }
     
     // Saída
 

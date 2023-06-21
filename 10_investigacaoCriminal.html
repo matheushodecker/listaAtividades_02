@@ -11,9 +11,37 @@
     */
 
     //ENTRADA
+    const telefone = prompt("Você telefonou para a vítima? Responda com: (S) para sim e (N) para não.").toLocaleUpperCase().trim();
+    const local = prompt("Você esteve no local do crime? Responda com: (S) para sim e (N) para não.").toLocaleUpperCase().trim();
+    const perto = prompt("Você mora perto da vítima? Responda com: (S) para sim e (N) para não.").toLocaleUpperCase().trim();
+    const divida = prompt("Você devia para a vítima? Responda com: (S) para sim e (N) para não.").toLocaleUpperCase().trim();
+    const trabalho = prompt("Você ja trabalhou com a vítima? Responda com: (S) para sim e (N) para não.").toLocaleUpperCase().trim();
+    let valor = 0;
 
     //PROCESSAMENTO
+    telefone == "S" ? valor1 = 1 : valor1 = 0;
+    local == "S" ? valor2 = 1 : valor2 = 0;
+    perto == "S" ? valor3 = 1 : valor3 = 0;
+    divida == "S" ? valor4 = 1 : valor4 = 0;
+    trabalho == "S" ? valor5 = 1 : valor5 = 0;
 
+    const somafinal = valor1 + valor2 + valor3 + valor4 + valor5;
+
+    if (somafinal < 2) {
+        alert("Você é inocente");
+    }
+
+    else if (somafinal === 2) {
+    alert("Você é suspeito");
+    }
+
+    else if (somafinal > 2 && somafinal < 5) {
+       alert("Você é cúmplice");
+    }
+
+    else if (somafinal === 5) {
+      alert("Você é o assassino");
+    }
     //SAÍDA
 
 </script>

@@ -7,11 +7,30 @@
     // - cães grandes: fator 7.
 
     // Entrada
+    const tamanho = prompt("Informe o porte do seu cão com: (porte pequeno = P; porte médio = M; porte grande = G)").toLocaleUpperCase().trim();
 
-    
     // Processamento
 
-    
+    if (tamanho === "P" || tamanho == "M" || tamanho === "G") {
+        var idade = Number(prompt("Quantos anos de vida tem seu cachorro?").trim());
+
+        if (tamanho == "P") {
+            var idade = idade * 5;
+        }
+
+        else if (tamanho == "M") {
+            var idade = idade * 6;
+        }
+
+        else if (tamanho == "G") {
+            var idade = idade * 7;
+        }
+
+        document.write(`A idade dele é ${idade}`);
+    }
+    else {
+        document.write("Opção inválida");
+    }
     // Saída
 
 </script>

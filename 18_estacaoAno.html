@@ -6,10 +6,68 @@
     */
 
     //ENTRADA
-
+    const mes = Number(prompt("Informe o mês em número").trim());
+    const dia = Number(prompt("Informe o dia").trim());
+    const hemisferio = prompt("Informe o hemisfério em que você está (S) para Sul, e (N) para Norte").toLocaleUpperCase().trim()
 
     //PROCESSAMENTO
+    if (mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31) {
 
+if (hemisferio == "N" || hemisferio == "S") {
+
+    if (hemisferio == "N") {
+
+        //verão
+        if (mes === 6 && dia >= 21 || mes === 9 && dia < 23 || mes > 6 && mes < 9) {
+            alert("É Verão!")
+        }
+
+        //Outono
+        if (mes === 9 && dia >= 23 || mes === 12 && dia < 21 || mes > 9 && mes < 12) {
+            alert("É Outono!")
+        }
+
+        //Inverno
+        if (mes === 12 && dia >= 21 || mes === 3 && dia < 20 || mes <= 3) {
+            alert("É Inverno!")
+        }
+
+        //Primavera
+
+        if (mes === 3 && dia >= 20 || mes === 6 && dia < 21 || mes > 3 && mes < 6) {
+            alert("É Primavera!")
+        }
+
+    if (hemisferio == "S") {
+
+        //verão
+        if (mes === 12 && dia >= 21 || mes === 3 && dia < 20 || mes <= 3) {
+            alert("É Verão!")
+        }
+
+        //Outono
+        if (mes === 3 && dia >= 20 || mes === 6 && dia < 21 || mes > 3 && mes < 6) {
+            alert("É Outono!")
+        }
+
+        //Inverno
+        if (mes === 6 && dia >= 21 || mes === 9 && dia < 22 || mes > 6 && mes < 9) {
+            alert("É Inverno!")
+        }
+        //Primavera
+
+        if (mes === 9 && dia >= 22 || mes === 12 && dia < 21 || mes > 9 && mes < 12) {
+            alert("É Primavera!")
+        }
+
+    }
+    }
+} else {
+    alert("Só existe dois hemisférios na terra, você é de qual planeta?");
+}
+} else {
+alert("Eu acho que era bom estudar um pouquinho!");
+}-
     
     //SAÍDA
 

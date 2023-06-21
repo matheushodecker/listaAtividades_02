@@ -1,0 +1,1 @@
+sor eu so entendi ate a 5 o resto fiz com ajuda
